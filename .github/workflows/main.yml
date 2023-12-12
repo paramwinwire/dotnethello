@@ -24,8 +24,22 @@ jobs:
       run: |
         # Remove the existing artifacts directory if it exists
         rm -rf $GITHUB_WORKSPACE/artifacts || true
+        
+        # Print the contents of dotnethello/out before copying
+        echo "Contents of $GITHUB_WORKSPACE/dotnethello/out/ before copying:"
+        ls -al $GITHUB_WORKSPACE/dotnethello/out/
+        
         # Create a new artifacts directory
         mkdir -p $GITHUB_WORKSPACE/artifacts
+        
+        # Print the contents of dotnethello/out after creating the artifacts directory
+        echo "Contents of $GITHUB_WORKSPACE/dotnethello/out/ after creating artifacts directory:"
+        ls -al $GITHUB_WORKSPACE/dotnethello/out/
+        
         # Copy the artifacts to the new directory
         cp -r $GITHUB_WORKSPACE/dotnethello/out/* $GITHUB_WORKSPACE/artifacts/
+        
+        # Print the contents of artifacts directory after copying
+        echo "Contents of $GITHUB_WORKSPACE/artifacts/ after copying:"
+        ls -al $GITHUB_WORKSPACE/artifacts/
 
