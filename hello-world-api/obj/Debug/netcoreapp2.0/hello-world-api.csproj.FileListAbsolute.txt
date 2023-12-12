@@ -1,0 +1,15 @@
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\bin\Debug\netcoreapp2.0\appsettings.Development.json
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\bin\Debug\netcoreapp2.0\appsettings.json
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\bin\Debug\netcoreapp2.0\hello-world-api.deps.json
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\bin\Debug\netcoreapp2.0\hello-world-api.runtimeconfig.json
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\bin\Debug\netcoreapp2.0\hello-world-api.runtimeconfig.dev.json
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\bin\Debug\netcoreapp2.0\hello-world-api.dll
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\bin\Debug\netcoreapp2.0\hello-world-api.pdb
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\obj\Debug\netcoreapp2.0\hello-world-api.csproj.AssemblyReference.cache
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\obj\Debug\netcoreapp2.0\hello-world-api.GeneratedMSBuildEditorConfig.editorconfig
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\obj\Debug\netcoreapp2.0\hello-world-api.AssemblyInfoInputs.cache
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\obj\Debug\netcoreapp2.0\hello-world-api.AssemblyInfo.cs
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\obj\Debug\netcoreapp2.0\hello-world-api.csproj.CoreCompileInputs.cache
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\obj\Debug\netcoreapp2.0\hello-world-api.dll
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\obj\Debug\netcoreapp2.0\hello-world-api.pdb
+D:\Githubtrainning\dotnethelloworld\dotnet-hello-world\hello-world-api\obj\Debug\netcoreapp2.0\hello-world-api.genruntimeconfig.cache

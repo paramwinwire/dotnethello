@@ -1,0 +1,64 @@
+name: For Dotnethelloworld
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  setup:
+    runs-on: windows-latest
+ 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+ 
+   
+  build:
+    runs-on: windows-latest
+ 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+ 
+    - name: Setup MSBuild.exe
+      #run: echo "Building..."
+      uses: microsoft/setup-msbuild@v1.0.2
+
+ 
+  test:
+    runs-on: uindows-latest
+ 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+ 
+    - name: Run Tests
+      run: echo "Running tests..."
+ 
+  deploy:
+    runs-on: windows-latest
+ 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+ 
+    - name: Deploy
+      run: echo "Deploying..."
+ 
+  cleanup:
+    runs-on: uindows-latest
+ 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+ 
+    - name: Clean Up
+      run: echo "Cleaning up...."
+ 
+  final:
+    needs: [setup, build, test, deploy, cleanup]
+    runs-on: uwindows-latest
+ 
+    steps:
+    - name: Final Step
+      run: echo "All jobs completed!"
