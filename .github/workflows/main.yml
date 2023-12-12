@@ -19,7 +19,8 @@ jobs:
         dotnet-version: '6.0.x'  # Adjust the version to your preference
 
     - name: Install dotnet-outdated
-      run: dotnet tool install --global dotnet-outdated
+      run: dotnet tool install --global dotnet-outdated --version 7.3.0  # Use the latest compatible version
+
 
     - name: Update Dependencies
       run: dotnet outdated -u
