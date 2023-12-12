@@ -18,5 +18,5 @@ jobs:
         dotnet-version: 5.x
  
     - name: Build and Test
-      uses: ./.github/actions/build-test
+      uses: ./.github/workflows/actions/build-test
  
