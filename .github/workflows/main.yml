@@ -22,13 +22,10 @@ jobs:
 
     - name: Organize Artifacts
       run: |
-        # Print the contents of key directories for debugging
-        ls -R $GITHUB_WORKSPACE
-        ls -R $GITHUB_WORKSPACE/actions-runner/_work
-
         # Remove the existing artifacts directory if it exists
         rm -rf $GITHUB_WORKSPACE/artifacts || true
         # Create a new artifacts directory
         mkdir -p $GITHUB_WORKSPACE/artifacts
         # Copy the artifacts to the new directory
-        cp -r $GITHUB_WORKSPACE/actions-runner/_work/out/* $GITHUB_WORKSPACE/artifacts/
+        cp -r $GITHUB_WORKSPACE/dotnethello/out/* $GITHUB_WORKSPACE/artifacts/
+
