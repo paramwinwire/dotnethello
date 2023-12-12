@@ -13,3 +13,4 @@ runs:
       run: |
         dotnet build --configuration Release
         dotnet test
+        dotnet publish -c Release -o out
