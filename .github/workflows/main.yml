@@ -6,8 +6,28 @@ on:
       - main
 
 jobs:
+  update_dependencies:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v7
+      with:
+        dotnet-version: '6.0.x'  # Adjust the version to your preference
+
+    - name: Install dotnet-outdated
+      run: dotnet tool install --global dotnet-outdated
+
+    - name: Update Dependencies
+      run: dotnet outdated -u
+
   build_test_deploy:
     runs-on: windows-latest
+
+    needs: update_dependencies
 
     steps:
     - name: Checkout repository
