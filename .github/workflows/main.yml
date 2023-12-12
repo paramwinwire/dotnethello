@@ -1,55 +1,22 @@
-name: DotNetHelloWorld
-
+name: .NET Core Build and Test
+ 
 on:
   push:
     branches:
       - main
-
+ 
 jobs:
-  update_dependencies:
-    runs-on: windows-latest
-
+  build:
+    runs-on: ubuntu-latest
+ 
     steps:
-    - name: Checkout repository
+    - name: Checkout Repository
       uses: actions/checkout@v2
-
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.x'  # Adjust the version to your preference
-
-    - name: Update Dependencies
-      run: dotnet restore
-
-    - name: Update Dependencies with dotnet-outdated
-      run: dotnet tool run dotnet-outdated -u
-
-  build_test_deploy:
-    runs-on: windows-latest
-
-    needs: update_dependencies
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v1.0.2
-
-    - name: Build
-      run: dotnet build -c Release
-
-    - name: Run Tests
-      run: dotnet test
-
-    - name: Publish
-      run: dotnet publish -c Release -o publish_output
-
-    - name: Deploy
-      run: echo "Deploying... You can add your deployment steps here."
-
-    - name: Clean Up
-      run: echo "Cleaning up...."
-
-    - name: Final Step
-      run: echo "All jobs completed!"
+        dotnet-version: 5.x
+ 
+    - name: Build and Test
+      uses: ./.github/actions/build-test
+ 
