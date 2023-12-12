@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Githubtrainning\\dotnethelloworld\\dotnet-hello-world\\hello-world-api\\hello-world-api.csproj": {}
+    "D:\\Githubtrainning\\dotnethello\\dotnethello\\hello-world-api\\hello-world-api.csproj": {}
   },
   "projects": {
-    "D:\\Githubtrainning\\dotnethelloworld\\dotnet-hello-world\\hello-world-api\\hello-world-api.csproj": {
+    "D:\\Githubtrainning\\dotnethello\\dotnethello\\hello-world-api\\hello-world-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Githubtrainning\\dotnethelloworld\\dotnet-hello-world\\hello-world-api\\hello-world-api.csproj",
+        "projectUniqueName": "D:\\Githubtrainning\\dotnethello\\dotnethello\\hello-world-api\\hello-world-api.csproj",
         "projectName": "hello-world-api",
-        "projectPath": "D:\\Githubtrainning\\dotnethelloworld\\dotnet-hello-world\\hello-world-api\\hello-world-api.csproj",
+        "projectPath": "D:\\Githubtrainning\\dotnethello\\dotnethello\\hello-world-api\\hello-world-api.csproj",
         "packagesPath": "C:\\Users\\ParameshRajappan\\.nuget\\packages\\",
-        "outputPath": "D:\\Githubtrainning\\dotnethelloworld\\dotnet-hello-world\\hello-world-api\\obj\\",
+        "outputPath": "D:\\Githubtrainning\\dotnethello\\dotnethello\\hello-world-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ParameshRajappan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.0"
+          "net7.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.0": {
-            "targetAlias": "netcoreapp2.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -35,20 +35,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.0": {
-          "targetAlias": "netcoreapp2.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.All": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.0, )",
-              "autoReferenced": true
-            }
-          },
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -60,6 +48,14 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Users\\ParameshRajappan\\AppData\\Roaming\\.dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
