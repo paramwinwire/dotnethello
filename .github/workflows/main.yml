@@ -19,8 +19,13 @@ jobs:
  
     - name: Build and Test
       uses: ./.github/workflows/actions/build-test
+
     - name: Organize Artifacts
       run: |
+        # Print the contents of key directories for debugging
+        ls -R $GITHUB_WORKSPACE
+        ls -R $GITHUB_WORKSPACE/actions-runner/_work
+
         # Remove the existing artifacts directory if it exists
         rm -rf $GITHUB_WORKSPACE/artifacts || true
         # Create a new artifacts directory
