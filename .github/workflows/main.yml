@@ -1,64 +1,35 @@
-name: For Dotnethelloworld
+name: DotNetHelloWorld
+
 on:
   push:
     branches:
       - main
- 
+
 jobs:
-  setup:
+  build_test_deploy:
     runs-on: windows-latest
- 
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
- 
-   
-  build:
-    runs-on: windows-latest
- 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
- 
+
     - name: Setup MSBuild.exe
-      #run: echo "Building..."
       uses: microsoft/setup-msbuild@v1.0.2
 
- 
-  test:
-    runs-on: uindows-latest
- 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
- 
+    - name: Build
+      run: dotnet build -c Release
+
     - name: Run Tests
-      run: echo "Running tests..."
- 
-  deploy:
-    runs-on: windows-latest
- 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
- 
+      run: dotnet test
+
+    - name: Publish
+      run: dotnet publish -c Release -o publish_output
+
     - name: Deploy
-      run: echo "Deploying..."
- 
-  cleanup:
-    runs-on: uindows-latest
- 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
- 
+      run: echo "Deploying... You can add your deployment steps here."
+
     - name: Clean Up
       run: echo "Cleaning up...."
- 
-  final:
-    needs: [setup, build, test, deploy, cleanup]
-    runs-on: uwindows-latest
- 
-    steps:
+
     - name: Final Step
       run: echo "All jobs completed!"
